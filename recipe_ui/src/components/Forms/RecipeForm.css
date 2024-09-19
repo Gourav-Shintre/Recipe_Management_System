@@ -1,0 +1,543 @@
+body {
+    background: url(https://img.freepik.com/premium-photo/minimalist-design-with-quote-about-cooking-wallpaper-ar-169-job-id-0afffab53ebb425497aa83e5dee178ea_1134901-233777.jpg?size=626&ext=jpg&ga=GA1.1.788382321.1722859527&semt=ais_hybrid)
+      no-repeat center center fixed;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+   
+  .container {
+    max-width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+   
+  .form-container {
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+     background-color:  rgb(243 238 237 / 85%);
+    border: 2px solid #e0e0e0;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    backdrop-filter: blur(5px);
+    opacity: 0.9px;
+    display: flex;
+    flex-direction: column;
+  }
+   
+  h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.8em;
+    text-align: center;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  }
+   
+  .form-group {
+    margin-bottom: 20px;
+  }
+   
+  .form-input {
+    width: 65%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background-color: #fff;
+  }
+   
+  .form-input.error {
+    border-color: #f44336;
+    background-color: #fdd;
+  }
+   
+  .form-input:focus {
+    border-color: #4caf50;
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+  }
+   
+  textarea.form-input {
+    height: 120px;
+    resize: vertical;
+    background-color: #fff;
+  }
+   
+  .error-message {
+    color: #f44336;
+    font-size: 0.875em;
+    margin-top: 5px;
+    font-weight: 600;
+  }
+   
+  .success-message {
+    color: #4caf50;
+    font-size: 1em;
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+  }
+   
+  .ingredient-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    position: relative;
+  }
+   
+  .add-button,
+  .remove-button,
+  .clear-button,
+  .add-image-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 0.875em;
+    transition: background-color 0.3s, transform 0.2s;
+    font-weight: 600;
+  }
+  .submit-button {
+      background-color: #28a745;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 10px;
+  }
+  .add-button {
+    background: #4caf50;
+  }
+   
+  .remove-button {
+    background: #f44336;
+  }
+   
+  .clear-button {
+    background: #f44336;
+  }
+   
+  .submit-button {
+    background: #4caf50;
+  }
+   
+  .add-image-button {
+    background: #4caf50;
+  }
+   
+  .add-button:hover,
+  .remove-button:hover,
+  .submit-button:hover,
+  .add-image-button:hover {
+    background: #45a049;
+  }
+   
+  .add-button:active,
+  .remove-button:active,
+  .clear-button:active,
+  .submit-button:active,
+  .add-image-button:active {
+    transform: scale(0.98);
+  }
+  .add-button:disabled,
+  .remove-button:disabled,
+  .clear-button:disabled,
+  .submit-button:disabled,
+  .add-image-button:disabled {
+    background: #a5d6a7;
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+   
+  .time-input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+   
+  .time-input-group input {
+    width: 80px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+  }
+   
+  .time-input-group input.error {
+    border-color: #f44336;
+  }
+   
+  .image-upload {
+      margin-bottom: 20px; /* Spacing below the image upload section */
+  }
+   
+  .image-upload-container {
+    display: flex;
+    grid-column: 2 / 3;
+      position: absolute;
+      bottom: 560px;
+      display: flex;
+      align-items: center;
+      right: 16px;
+      top: 180px;
+      height: 200px;
+  }
+  .recipe-image-placeholder{
+    position: absolute;
+    border-radius: 8px;
+    margin-bottom: 50px;
+    right:-25px;
+
+  }
+   .recipe-current-image{
+    width: 180px;
+    height:  200px;
+    position: relative;
+    right: 20px;
+    object-fit: fill;
+   }
+  .image-upload-input {
+    display: none;
+  }
+   
+  .image-previews {
+      position: relative;
+      width: 150px;
+      height: 200px;
+      border-radius: 5px;
+      overflow: hidden;
+      margin-right: 15px;
+      border: 1px solid #ddd;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+   
+  .recipe-image {
+      position: absolute;
+      border-radius: 8px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+  .add-image-button {
+      position: absolute;
+      cursor: pointer;
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      margin-left: 10px;
+      top: 220px;
+      right: 32px;
+  }
+   
+  .cancel-image-button {
+      position: absolute;
+      top: 17px;
+      right: 4px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      padding: 5px;
+      cursor: pointer;
+      font-size: 16px; /* Adjust the size of the cancel button */
+  }
+   
+  .cancel-image-button:hover {
+    background: rgba(0, 0, 0, 0.7);
+  }
+   
+  .form-buttons {
+      margin-top: 20px; /* Spacing above the form buttons */
+  }
+   
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+  }
+   
+  .form-group {
+    margin-bottom: 20px;
+  }
+   
+  .image-label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #333;
+  }
+  body {
+    background: url(https://img.freepik.com/premium-photo/minimalist-design-with-quote-about-cooking-wallpaper-ar-169-job-id-0afffab53ebb425497aa83e5dee178ea_1134901-233777.jpg?size=626&ext=jpg&ga=GA1.1.788382321.1722859527&semt=ais_hybrid)
+      no-repeat center center fixed;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+   
+  .container {
+    max-width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+   
+  .form-container {
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+     background-color:  rgb(243 238 237 / 85%);
+    border: 2px solid #e0e0e0;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    backdrop-filter: blur(5px);
+    opacity: 0.9px;
+    display: flex;
+    flex-direction: column;
+  }
+   
+  h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.8em;
+    text-align: center;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  }
+   
+  .form-group {
+    margin-bottom: 20px;
+  }
+   
+  .form-input {
+    width: 65%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background-color: #fff;
+  }
+   
+  .form-input.error {
+    border-color: #f44336;
+    background-color: #fdd;
+  }
+   
+  .form-input:focus {
+    border-color: #4caf50;
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+  }
+   
+  textarea.form-input {
+    height: 120px;
+    resize: vertical;
+    background-color: #fff;
+  }
+   
+  .error-message {
+    color: #f44336;
+    font-size: 0.875em;
+    margin-top: 5px;
+    font-weight: 600;
+  }
+   
+  .success-message {
+    color: #4caf50;
+    font-size: 1em;
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+  }
+   
+  .ingredient-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    position: relative;
+  }
+   
+  .add-button,
+  .remove-button,
+  .clear-button,
+  .add-image-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 0.875em;
+    transition: background-color 0.3s, transform 0.2s;
+    font-weight: 600;
+  }
+  .submit-button {
+      background-color: #28a745;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 10px;
+  }
+  .add-button {
+    background: #4caf50;
+  }
+   
+  .remove-button {
+    background: #f44336;
+  }
+   
+  .clear-button {
+    background: #f44336;
+  }
+   
+  .submit-button {
+    background: #4caf50;
+  }
+   
+  .add-image-button {
+    background: #4caf50;
+  }
+   
+  .add-button:hover,
+  .remove-button:hover,
+  .submit-button:hover,
+  .add-image-button:hover {
+    background: #45a049;
+  }
+   
+  .add-button:active,
+  .remove-button:active,
+  .clear-button:active,
+  .submit-button:active,
+  .add-image-button:active {
+    transform: scale(0.98);
+  }
+  .add-button:disabled,
+  .remove-button:disabled,
+  .clear-button:disabled,
+  .submit-button:disabled,
+  .add-image-button:disabled {
+    background: #a5d6a7;
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+   
+  .time-input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+   
+  .time-input-group input {
+    width: 80px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+  }
+   
+  .time-input-group input.error {
+    border-color: #f44336;
+  }
+   
+  .image-upload {
+      margin-bottom: 20px; /* Spacing below the image upload section */
+  }
+   
+  .image-upload-container {
+    display: flex;
+    grid-column: 2 / 3;
+      position: absolute;
+      bottom: 560px;
+      display: flex;
+      align-items: center;
+      right: 16px;
+      top: 180px;
+      height: 200px;
+  }
+   
+  .image-upload-input {
+    display: none;
+  }
+   
+  .image-previews {
+      position: relative;
+      width: 150px;
+      height: 200px;
+      border-radius: 5px;
+      overflow: hidden;
+      margin-right: 15px;
+      border: 1px solid #ddd;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+   
+  .recipe-image {
+      position: absolute;
+      border-radius: 8px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+  .add-image-button {
+      position: absolute;
+      cursor: pointer;
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      margin-left: 10px;
+      top: 220px;
+      right: 32px;
+  }
+   
+  .cancel-image-button {
+      position: absolute;
+      top: 17px;
+      right: 4px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      padding: 5px;
+      cursor: pointer;
+      font-size: 16px; /* Adjust the size of the cancel button */
+  }
+   
+  .cancel-image-button:hover {
+    background: rgba(0, 0, 0, 0.7);
+  }
+   
+  .form-buttons {
+      margin-top: 20px; /* Spacing above the form buttons */
+  }
+   
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+  }
+   
+  .form-group {
+    margin-bottom: 20px;
+  }
+   
+  .image-label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #333;
+  }

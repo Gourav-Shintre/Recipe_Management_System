@@ -1,0 +1,90 @@
+{
+  "name": "recipe_ui",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@epam/assets": "^5.8.1",
+    "@epam/uui": "^5.8.1",
+    "@epam/uui-components": "^5.8.1",
+    "@epam/uui-core": "^5.8.1",
+    "@react-firebase/auth": "^0.2.10",
+    "ajv": "^8.17.1",
+    "axios": "^1.7.3",
+    "history": "^4.10.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.2.1",
+    "react-router-dom": "^5.3.4",
+    "react-scripts": "^5.0.1",
+    "react-toastify": "^10.0.5",
+    "sass": "^1.57.1",
+    "typescript": "4.9.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --coverage --transformIgnorePatterns \"node_modules/(?!axios)/\"",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.(js|jsx|ts|tsx)$": "babel-jest"
+    },
+    "transformIgnorePatterns": [
+      "/node_modules/(?!(axios)/)"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|less)$": "identity-obj-proxy"
+    },
+    "coveragePathIgnorePatterns": [
+      "src/service/",
+      "src/index"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-proposal-logical-assignment-operators": "^7.20.7",
+    "@babel/plugin-proposal-private-methods": "^7.18.6",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/plugin-transform-runtime": "^7.24.7",
+    "@babel/preset-env": "^7.25.3",
+    "@babel/preset-react": "^7.24.7",
+    "@babel/preset-typescript": "^7.24.7",
+    "@epam/uui-test-utils": "^5.8.1",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^16.0.0",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/history": "4.7.11",
+    "@types/jest": "^27.5.2",
+    "@types/node": "16.18.4",
+    "@types/react": "18.2.21",
+    "@types/react-router-dom": "^5.3.3",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "ts-jest": "^29.2.4"
+  },
+  "resolutions": {
+    "@types/react": "18.2.21"
+  }
+}

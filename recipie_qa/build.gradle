@@ -1,0 +1,27 @@
+plugins {
+    id 'groovy'
+}
+
+group = 'com.epam.recipie'
+version = '1.0-SNAPSHOT'
+
+java {
+    sourceCompatibility = '17'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.apache.groovy:groovy:4.0.14'
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation 'org.testng:testng:7.7.0'
+    implementation 'org.seleniumhq.selenium:selenium-java:4.21.0'
+    testImplementation 'io.rest-assured:rest-assured:5.4.0'
+}
+
+test {
+    useTestNG()
+}

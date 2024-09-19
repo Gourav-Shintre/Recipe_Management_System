@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.8" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Epam.Recipe.Application\Epam.Recipe.Application.csproj" />
+    <ProjectReference Include="..\Epam.Recipe.Data\Epam.Recipe.Data.csproj" />
+    <ProjectReference Include="..\Epam.Recipe.RecipeService.Contracts\Epam.Recipe.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

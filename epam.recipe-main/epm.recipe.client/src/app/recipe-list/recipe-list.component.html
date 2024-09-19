@@ -1,0 +1,7 @@
+<header class="recipe-header">
+  <h1>All Recipes</h1>
+  <p>Discover a variety of delicious recipes to try at home!</p>
+</header>
+<div class="mb-5">
+  <app-recipe-list-card *ngFor="let recipe of service.listRecipe.slice(0,10)" [recipe]="recipe"></app-recipe-list-card>
+</div>

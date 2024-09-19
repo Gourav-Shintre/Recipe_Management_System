@@ -1,0 +1,179 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e87b1e;
+  color: #fff;
+  padding: 10px 20px;
+  height: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+  z-index: 1001;
+  position: relative;
+}
+.logo a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+}
+ .logo{
+  display: flex;
+ }
+.header-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+ 
+.logo {
+  margin-right: auto;
+}
+ 
+.logo a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 15px;
+}
+ 
+.nav {
+  display: flex;
+  align-items: center;
+}
+ 
+.home-button {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 15px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+ 
+.home-button:hover {
+  background-color: #fff;
+  color: #e87b1e;
+}
+ 
+.profilelink {
+  display: flex;
+  align-items: center;
+}
+ 
+.profileimg {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #c2c1c1;
+  border: 3px solid #fff;
+}
+ 
+.hamburger-menu {
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+  margin-left: 15px;
+}
+ 
+.hamburger-menu:hover {
+  color: #f8f8f8;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.search-bar-container {
+  position: relative;
+  width: 300px;
+}
+
+/* Search bar styling */
+.search-bar {
+  width: 100%;
+  padding: 8px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+}
+
+.search-bar:focus {
+  border-color: #007bff;
+}
+
+/* Search results container */
+.search-results {
+  display: none; /* Hide by default */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  color: black;
+}
+
+/* Show search results when visible class is added */
+.search-results.visible {
+  display: block;
+}
+
+/* Styling individual result items */
+.search-result {
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px; /* Rounded corners */
+  transition: background-color 0.2s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for result items */
+.search-result:hover {
+  background-color: #efefef; /* Light gray background on hover */
+}
+.search-results {
+  display: none; /* Hide by default */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.search-results.visible {
+  display: block;
+}
+
+.no-results {
+  padding: 10px;
+  font-size: 16px;
+  color: #888; /* Adjust color as needed */
+  text-align: center;
+}
+
+a img{
+  margin-top: 10px;
+}

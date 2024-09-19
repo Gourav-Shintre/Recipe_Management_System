@@ -1,0 +1,41 @@
+.my-recipes-page {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px; /* Space between recipe cards */
+    justify-content: center; /* Center the cards horizontally */
+  }
+ 
+  .recipe-info {
+    
+    gap: 6px;
+  }
+  
+ 
+  .home-page {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+  }
+ 
+  .loading {
+    height: 500px;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .display-all-recipes .recipe-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    color: #bd1818;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 90%;
+  }

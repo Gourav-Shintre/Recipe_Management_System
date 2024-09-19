@@ -1,0 +1,13 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-12">
+      <div class="rectangular-card">
+        <img [src]="recipe.image?recipe.image:'https://thenutbank.com.au/cdn/shop/products/AAA_no_image_3a0b3dd0-ddea-463c-b6ae-d743bd7db482_grande.gif?v=1550728884'" class="card-img-left" alt="Recipe Image">
+        <div class="card-body">
+          <h5 class="card-title text-danger">{{ recipe.title }}</h5>
+          <p class="card-text"><strong>Category:</strong> {{ recipe.category }}</p>
+          <p class="card-text"><strong>Preparation Time:</strong> {{recipe.preparationTime<=60?recipe.preparationTime+'mins':(getFlooredValue(recipe.preparationTime/60))+'hr '+(recipe.preparationTime%60)+'mins'}}</p>
+        </div>
+      </div>
+    </div>
+  </div>

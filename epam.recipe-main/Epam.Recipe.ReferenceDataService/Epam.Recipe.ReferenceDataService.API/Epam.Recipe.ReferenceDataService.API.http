@@ -1,0 +1,6 @@
+@Epam.Recipe.ReferenceDataService.API_HostAddress = http://localhost:5184
+
+GET {{Epam.Recipe.ReferenceDataService.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Epam.Recipe.Common\Epam.Recipe.Common.Library\Epam.Recipe.Common.Library.csproj" />
+    <ProjectReference Include="..\Epam.Recipe.Data\Epam.Recipe.Data.csproj" />
+    <ProjectReference Include="..\Epam.Recipe.RecipeService.Contracts\Epam.Recipe.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

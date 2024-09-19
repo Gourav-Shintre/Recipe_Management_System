@@ -1,0 +1,94 @@
+/* Container holding all recipes */
+
+.searchRecipe{
+  width: 90vw;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px;
+}
+
+/* Recipe card styling */
+.recipe-cards {
+  flex-direction: column;
+  width: 300px;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  background-color: #fff;
+}
+
+.recipe-card.expanded {
+  width: 100%;
+  transform: scale(1.05);
+}
+
+/* Recipe image styling */
+.recipe-image {
+  margin-top: -35px;
+  position:absolute;
+  right: 40px;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Recipe information styling */
+.recipe-info {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.recipe-title {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.recipe-category,
+.recipe-prep-time {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Recipe actions (buttons) styling */
+.recipe-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 10px;
+}
+
+.action-icon {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #007bff;
+  transition: color 0.3s;
+}
+
+.action-icon:hover {
+  color: #0056b3;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .recipe-card {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+
+.close-button {
+  position: absolute;
+  top: -50px;
+  right: 5px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
